@@ -29,8 +29,9 @@ header {
   align-items: center;
   z-index: 9999;
   position: fixed;
-  padding: 1.4rem 7%;
+  padding: 1rem 7%;
   background-color: var(--primary);
+    color: var(--darkbg);
 }
 
 header .navList {
@@ -42,7 +43,7 @@ header .navList {
 
 header .navList a {
   text-decoration: none;
-  color: var(--bg);
+  color: inherit;
 }
 
 header .navList a:hover {
