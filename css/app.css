@@ -42,7 +42,7 @@ header .navList {
 
 header .navList a {
   text-decoration: none;
-  color: inherit;
+  color: var(--bg);
 }
 
 header .navList a:hover {
