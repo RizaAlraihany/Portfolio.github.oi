@@ -161,18 +161,35 @@ h2 {
   color: var(--darkColor);
 }
 
-.textAbout {
-  padding: 2rem;
+.contentAbout {
   display: flex;
-  gap: 2rem;
-  width: 80%;
-  /* background-color: aqua; */
-
-  article {
-    text-wrap: balance;
-    text-align: center;
-    font-size: 1.2rem;
+  margin-inline: 15%;
+  
+  .textAbout {
+    padding: 2rem;
+    display: inline-block;
+    gap: 1rem;
+    width: 90%;
+  
+  
+    article {
+      text-indent: 3rem;
+      line-height: 2.5rem;
+      text-wrap: balance;
+      padding-bottom: .5rem;
+      text-align: left;
+      font-size: 1.2rem;
+    }
+  
   }
+  img {
+    margin: 2rem;
+    width: 250px;
+    height: 250px;
+    background-color: var(--primary);
+    border-radius: 70px  8px 50px  8px;
+  }
+}
 }
 
 .containerProjek {
