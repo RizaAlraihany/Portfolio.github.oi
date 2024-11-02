@@ -44,6 +44,7 @@ header .navList {
 header .navList a {
   text-decoration: none;
   color: inherit;
+    font-weight: 500;
 }
 
 header .navList a:hover {
