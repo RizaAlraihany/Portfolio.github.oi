@@ -44,7 +44,7 @@ header .navList {
 header .navList a {
   text-decoration: none;
   color: inherit;
-    font-weight: 500;
+  font-weight: 500;
 }
 
 header .navList a:hover {
@@ -68,7 +68,6 @@ header .iconAdditional {
   cursor: pointer;
   font-size: 30px;
   gap: 1rem;
-  
 }
 
 #iconMode {
@@ -90,10 +89,12 @@ aside {
   inset-block: 0;
   inset-inline-end: 0;
   display: flex;
+
   img {
     width: 2rem;
+    height: 2rem;
     border-radius: 100%;
-    /* height: 2; */
+    object-fit: contain;
     scale: 1.1;
   }
 
@@ -138,7 +139,6 @@ aside {
     height: 250px;
     object-fit: cover;
     border-radius: 100%;
-    margin-block: 2rem;
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
   }
 }
@@ -165,40 +165,39 @@ h2 {
 .contentAbout {
   display: flex;
   margin-inline: 15%;
-  
+
   .textAbout {
     padding: 2rem;
     display: inline-block;
-    gap: 1rem;
     width: 90%;
-  
-  
+
     article {
       text-indent: 3rem;
-      line-height: 2.5rem;
+      line-height: 2.2rem;
       text-wrap: balance;
-      padding-bottom: .5rem;
       text-align: left;
       font-size: 1.2rem;
     }
-  
   }
   img {
-    margin: 2rem;
-    width: 250px;
-    height: 250px;
-    background-color: var(--primary);
-    border-radius: 70px  8px 50px  8px;
+    margin-top: 3rem;
+    width: 240px;
+    height: 240px;
+    border-radius: 70px 8px 50px 8px;
+    transition: 0.3s all ease-in-out;
   }
-}
+
+  img:hover {
+    transform: scale(1.05);
+  }
 }
 
 .containerProjek {
-  margin-top: 5rem;
-  padding-top: 2rem;
+  padding-block: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   .myProjek {
     display: flex;
@@ -220,6 +219,11 @@ h2 {
       transform: scale(1.05);
     }
   }
+  svg {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
 }
 
 .containerContact {
@@ -233,6 +237,7 @@ h2 {
 
 .containerContact .contactMe {
   padding: 1.2rem 0.2rem;
+  margin-bottom: 2rem;
   display: flex;
   border: 1px solid var(--darkColor);
   border-radius: 8px;
@@ -271,11 +276,20 @@ form {
     font-weight: bolder;
     font-size: 1.2rem;
     border-radius: 10px;
+    border: none;
     align-self: center;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .btn:hover {
+    background-color: transparent;
+    outline: 1px groove var(--primary);
+    color: inherit;
+    cursor: pointer;
   }
 }
 
-.footer p {
+.footer {
   text-align: center;
   background-color: var(--primary);
   max-width: 100%;
@@ -301,7 +315,6 @@ form {
 
 .dark-mode .svg-icon {
   opacity: 0;
-  /* Set opacity to 0 in dark mode */
 }
 
 /* dark mode end */
@@ -316,6 +329,12 @@ form {
 @media screen and (max-width: 768px) {
   #menu {
     display: inline-block;
+    padding: 5px;
+  }
+
+  header {
+    padding: 0.1rem 5%;
+    margin-bottom: 1rem;
   }
 
   header .navList {
@@ -353,10 +372,9 @@ form {
     ul {
       flex-direction: row;
       width: 100%;
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
+      border-radius: 0;
       margin: 0;
-      padding: 0;
+      padding: 0.5rem;
     }
   }
 
@@ -372,8 +390,27 @@ form {
     transform: scaleX(1);
   }
 
-  .textAbout {
-    flex-wrap: wrap;
+  .contentAbout {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    width: 100%;
+
+    .textAbout {
+      flex-wrap: wrap;
+
+      article {
+        text-align: center;
+        text-indent: 0rem;
+        line-height: normal;
+        padding-bottom: 1rem;
+      }
+    }
+
+    img {
+      margin: 0;
+      width: 300px;
+      height: 300px;
+    }
   }
 }
 
